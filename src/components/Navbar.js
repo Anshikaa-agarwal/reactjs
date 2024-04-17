@@ -32,5 +32,4 @@ Navbar.propTypes = {
   name: PropTypes.string,
   aboutLink: PropTypes.string,
   about: PropTypes.string,
-  
 }

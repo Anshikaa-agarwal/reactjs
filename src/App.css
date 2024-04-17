@@ -1,5 +1,11 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
 .heading{
   font-style: italic;
   font-weight: bolder;
   color: #282c34;
+}
+body{
+  background-color: gainsboro;
 }
