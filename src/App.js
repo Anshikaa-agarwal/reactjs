@@ -6,7 +6,7 @@ const user = {
   name: "TextUtility",
   about: "thisIsAbout",
   link: "http://www.google.com",
-  heading: "Enter text here"
+  heading: "Enter text here to analysze"
 };
 function App() {
   return (

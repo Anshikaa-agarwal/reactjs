@@ -9,3 +9,9 @@
 body{
   background-color: gainsboro;
 }
+.btns button{
+  margin-right: 20px;
+}
+.h5{
+  display: inline;
+}
