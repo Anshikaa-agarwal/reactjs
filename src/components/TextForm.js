@@ -20,7 +20,6 @@ const handleOnChange = (event) => {
   console.log("handleOnChange initialized.")
   setText(event.target.value);
 }
-
 return (
 <>
 <div className='container'>
@@ -38,10 +37,10 @@ return (
 <br />
 <div className="container my-2">
   <h3>Your text summary here:</h3>
-  <p>{text.split(" ").length} words and {text.length} characters.</p>
+  <p>Total words: {text.split(" ").length}</p>
+  <p>Number of characters (including spaces): {text.length}</p>
   <p>Time to read: {0.008 * text.split(" ").length} minutes</p>
-  <p><h5 className='h5'>Text Preview:</h5> {text}
-  </p>
+  <p><h5 className='h5'>Text Preview:</h5> {text}</p>
 
 </div>
 </>
