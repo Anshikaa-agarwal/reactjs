@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
@@ -10,6 +11,8 @@ const user = {
   heading: "Enter text here to analysze"
 };
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <>
     <Navbar name={user.name} about={user.about} aboutLink={user.link}/>

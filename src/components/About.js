@@ -1,32 +1,33 @@
+import { useState } from 'react';
 import React from 'react'
-import { useState } from 'react'
 
 export default function About() {
 
-const [myStyle, setMyStyle] = useState({
+  const [myStyle, setMyStyle] = useState({
     color: 'black',
     backgroundColor: 'white'
-})
-const [mode, setMode] = useState(true);
-const toggleMode = () => {
-    if(mode===false) {
-        setMyStyle({
-            color: 'black',
-            backgroundColor: 'white'
-        })
-    }
-    else{
-        setMyStyle({
-            color: 'white',
-            backgroundColor: 'black'
-        })
+  });
+  const [mode, setMode] = useState(true);
+
+  const toggleMode = () => {
+    if (!mode) {
+      setMyStyle({
+        color: 'black',
+        backgroundColor: 'white'
+      });
+    } else {
+      setMyStyle({
+        color: 'white',
+        backgroundColor: 'black'
+      });
     }
     setMode(!mode);
-}
+  };
+
   return (
     <div>
-        <div className="accordion my-4" id="accordionExample" style={myStyle}>
-            <div className="accordion-item" style={myStyle}>
+      <div className="accordion my-4" id="accordionExample" style={myStyle}>
+      <div className="accordion-item" style={myStyle}>
                 <h2 className="accordion-header" style={myStyle}>
                 <button style={myStyle} className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Accordion Item #1
@@ -62,9 +63,8 @@ const toggleMode = () => {
                 </div>
                 </div>
             </div>
-
-            <button onClick={toggleMode}>Enable {mode ? 'Dark' : 'Light'} Mode</button>
-    </div>
+      </div>
+      <button onClick={toggleMode}>Enable {mode ? 'Dark' : 'Light'} Mode</button>
     </div>
   )
 }
