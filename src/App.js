@@ -6,7 +6,7 @@ import TextForm from './components/TextForm';
 
 const user = {
   name: "TextUtility",
-  about: "thisIsAbout",
+  about: "About",
   link: "http://www.google.com",
   heading: "Enter text here to analysze"
 };
