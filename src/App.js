@@ -12,13 +12,21 @@ const user = {
 };
 function App() {
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [mode, setMode] = useState('dark');
+  const toggleMode = () => {
+    if(mode==='dark'){
+      setMode('light');
+    } else {
+      setMode('dark');
+    }
+  }
+  
   return (
     <>
-    <Navbar name={user.name} about={user.about} aboutLink={user.link}/>
+    <Navbar name={user.name} about={user.about} aboutLink={user.link} mode={mode}/>
     <div className="container">
       {/* <TextForm heading={user.heading}/> */}
-      <About/>
+      <About toggleMode={toggleMode} mode={mode}/>
     </div>
     </>
   );

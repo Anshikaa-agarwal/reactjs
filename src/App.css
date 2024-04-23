@@ -15,3 +15,18 @@ body{
 .h5{
   display: inline;
 }
+:root {
+  --text-color: black;
+  --background-color: white;
+  /* ... other color variables */
+}
+
+.dark-mode {
+  --text-color: white;
+  --background-color: black;
+}
+.accordion {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  /* ... other styles */
+}
