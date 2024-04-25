@@ -12,23 +12,36 @@ const user = {
 };
 function App() {
 
-  const [mode, setMode] = useState('dark');
+  const [mode, setMode] = useState('light');
   const toggleMode = () => {
     if(mode==='dark'){
       setMode('light');
+      setBodyStyle({
+        backgroundColor: '#dfe5eb',
+        height: '100vh'
+      });
     } else {
       setMode('dark');
+      setBodyStyle({
+        backgroundColor: '#696969',
+        height: '100vh'
+      })
     }
   }
+
+  const [bodyStyle, setBodyStyle] = useState({
+    backgroundColor: '#dfe5eb',
+    height: '100vh'
+  })
   
   return (
-    <>
+    <div className='body' style={bodyStyle}>
     <Navbar name={user.name} about={user.about} aboutLink={user.link} mode={mode}/>
     <div className="container">
       {/* <TextForm heading={user.heading}/> */}
       <About toggleMode={toggleMode} mode={mode}/>
     </div>
-    </>
+    </div>
   );
 }
 

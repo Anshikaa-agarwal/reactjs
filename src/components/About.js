@@ -6,7 +6,7 @@ export default function About({mode, toggleMode}) {
   return (
     <div>
       <div className={`accordion my-4`} >
-      <div  className={`accordion ${mode === 'dark' ? 'dark-mode' : ''}`} >
+      <div className={`accordion-item text-${mode==='light' ? 'dark' : 'light'} bg-${mode==='light' ? 'light' : 'dark'}`} >
                 <h2 className="accordion-header">
                 <button  className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Accordion Item #1
@@ -18,7 +18,7 @@ export default function About({mode, toggleMode}) {
                 </div>
                 </div>
             </div>
-            <div className="accordion-item" style={{ backgroundColor: mode === 'dark' ? 'black' : 'white', color: mode === 'dark' ? 'white' : 'black' }} >
+            <div className={`accordion-item text-${mode==='light' ? 'dark' : 'light'} bg-${mode==='light' ? 'light' : 'dark'}`} >
                 <h2 className="accordion-header" >
                 <button  className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Accordion Item #2
@@ -30,7 +30,7 @@ export default function About({mode, toggleMode}) {
                 </div>
                 </div>
             </div>
-            <div className="accordion-item" style={{ backgroundColor: mode === 'dark' ? 'black' : 'white', color: mode === 'dark' ? 'white' : 'black' }} >
+            <div className={`accordion-item text-${mode==='light' ? 'dark' : 'light'} bg-${mode==='light' ? 'light' : 'dark'}`} >
                 <h2 className="accordion-header">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     Accordion Item #3
