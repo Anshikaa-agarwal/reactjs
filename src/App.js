@@ -14,6 +14,7 @@ const user = {
 function App() {
 
   const [mode, setMode] = useState('light');
+  const [alert, setAlert] = useState(null);
   const toggleMode = () => {
     if(mode==='dark'){
       setMode('light');
