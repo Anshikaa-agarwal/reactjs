@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import Alert from './components/Alert';
 
 const user = {
   name: "TextUtility",
@@ -37,6 +38,7 @@ function App() {
   return (
     <div className='body' style={bodyStyle}>
     <Navbar name={user.name} about={user.about} aboutLink={user.link} mode={mode}/>
+    <Alert alert="You have opened React App"/>
     <div className="container">
       {/* <TextForm heading={user.heading}/> */}
       <About toggleMode={toggleMode} mode={mode}/>
